@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/sziu/static/css/main.31d6cfe0.css",
-    "main.js": "/sziu/static/js/main.354d775b.js",
+    "main.js": "/sziu/static/js/main.a0bc66a6.js",
     "index.html": "/sziu/index.html",
-    "main.354d775b.js.map": "/sziu/static/js/main.354d775b.js.map"
+    "main.a0bc66a6.js.map": "/sziu/static/js/main.a0bc66a6.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.354d775b.js"
+    "static/js/main.a0bc66a6.js"
   ]
 }
