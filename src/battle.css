@@ -1,0 +1,56 @@
+.battle-area {
+    width: 300px;
+    padding: 10px 10px;
+    border: 2px solid black;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: small;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+button {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    margin: 5px 2px;
+}
+
+select {
+    text-align: center;
+    margin: 5px 2px;
+    padding: 3px 0;
+}
+
+ul,
+ol {
+    display: inline-block;
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.name {
+    padding: 0px 5px;
+}
+
+.xbutton {
+    margin-left: 2px;
+    text-align: center;
+    background-color: grey;
+    border: none;
+}
+
+.result {
+    background-color: whitesmoke;
+    padding: 20px 10px;
+    margin: 15px 0px;
+}
+
+.zombie {
+    color: red;
+    font-weight: 600;
+}
