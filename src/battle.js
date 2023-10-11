@@ -198,18 +198,19 @@ function Battle() {
         newResultA += `[${newRoll}] ${avoid[index]} 실패<br>`;
         const nnewRoll = Math.floor(Math.random() * (100 - 1) + 1);
         if (nnewRoll < 35) {
-          newResultA += `좀비가 달려들어 ${avoid[index]}의 손을 물었다.<br>`;
+          newResultH += `좀비가 달려들어 ${avoid[index]}의 손을 물었다.<br>`;
         } else if (nnewRoll < 65) {
-          newResultA += `바닥을 기어온 좀비가 ${avoid[index]}의 발목을 물었다.<br>`;
+          newResultH += `바닥을 기어온 좀비가 ${avoid[index]}의 발목을 물었다.<br>`;
         } else if (nnewRoll < 85) {
-          newResultA += `좀비가 뛰어들어 ${avoid[index]}의 아래팔을 물었다.<br>`;
+          newResultH += `좀비가 뛰어들어 ${avoid[index]}의 아래팔을 물었다.<br>`;
         } else if (nnewRoll < 95) {
-          newResultA += `좀비가 넘어지며 ${avoid[index]}의 종아리를 물었다.<br>`;
+          newResultH += `좀비가 넘어지며 ${avoid[index]}의 종아리를 물었다.<br>`;
         } else if (nnewRoll < 100) {
-          newResultA += `좀비가 입을 크게 벌리며 ${avoid[index]}의 위팔을 물었다.<br>`;
+          newResultH += `좀비가 입을 크게 벌리며 ${avoid[index]}의 위팔을 물었다.<br>`;
         }
       }
     }
+    newResultA += `<br>` + newResultH;
     setResultA(newResultA);
     // setResultH(newResultH);
   };
