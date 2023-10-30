@@ -13,6 +13,7 @@ function Basic() {
     bat: [0, 30, 40, 50, 60, 70],
     agi: [0, 60, 70, 80, 85, 90],
     sec: [0, 20, 35, 50, 65, 80],
+    cut: [50, 50, 50, 50, 50, 50],
   };
 
   const onChangeStat = (e) => {
@@ -44,14 +45,13 @@ function Basic() {
   return (
     <div className="battle-area">
       <h3>일반 판정</h3>
-
       <select className="battle-select" onChange={onChangeStat}>
         <option value="str">근력</option>
         <option value="bat">전투</option>
         <option value="agi">민첩</option>
         <option value="sec">은밀</option>
+        <option value="cut">절단</option>
       </select>
-
       <select className="battle-select" onChange={onChangeValue}>
         <option value={1}>1</option>
         <option value={2}>2</option>
@@ -59,13 +59,13 @@ function Basic() {
         <option value={4}>4</option>
         <option value={5}>5</option>
       </select>
-
       <button onClick={onClickBattle}>결과</button>
 
       <div className="result">
         [{roll}] {c1.name}
         {result}
       </div>
+      <p>절단은 수치 상관없이 50%</p>
     </div>
   );
 }

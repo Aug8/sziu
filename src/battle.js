@@ -198,15 +198,15 @@ function Battle() {
         newResultA += `[${newRoll}] ${avoid[index]} 실패<br>`;
         const nnewRoll = Math.floor(Math.random() * (100 - 1) + 1);
         if (nnewRoll < 35) {
-          newResultH += `좀비가 달려들어 ${avoid[index]}의 손을 물었다.<br>`;
+          newResultH += `좀비가 달려들어 ${avoid[index]}의 (오른/왼)손을 물었다.<br>`;
         } else if (nnewRoll < 65) {
-          newResultH += `바닥을 기어온 좀비가 ${avoid[index]}의 발목을 물었다.<br>`;
+          newResultH += `바닥을 기어온 좀비가 ${avoid[index]}의 (오른쪽/왼쪽) 발목을 물었다.<br>`;
         } else if (nnewRoll < 85) {
-          newResultH += `좀비가 뛰어들어 ${avoid[index]}의 아래팔을 물었다.<br>`;
+          newResultH += `좀비가 뛰어들어 ${avoid[index]}의 (오른쪽/왼쪽) 아래팔을 물었다.<br>`;
         } else if (nnewRoll < 95) {
-          newResultH += `좀비가 넘어지며 ${avoid[index]}의 종아리를 물었다.<br>`;
+          newResultH += `좀비가 넘어지며 ${avoid[index]}의 (오른쪽/왼쪽) 종아리를 물었다.<br>`;
         } else if (nnewRoll < 100) {
-          newResultH += `좀비가 입을 크게 벌리며 ${avoid[index]}의 위팔을 물었다.<br>`;
+          newResultH += `좀비가 입을 크게 벌리며 ${avoid[index]}의 (오른쪽/왼쪽) 위팔을 물었다.<br>`;
         }
       }
     }
@@ -251,6 +251,11 @@ function Battle() {
       </ul>
       <p className="gubun">- - - - - - - - - - - - - - - - - - - - - - -</p>
 
+      <p>
+        N마리의 좀비와 조우합니다. <br></br>
+        [전투/민첩/은밀]중 하나를 선택해 주세요.
+      </p>
+
       <input
         type="number"
         placeholder="좀비 수"
@@ -290,7 +295,7 @@ function Battle() {
       <div className="result">
         <div dangerouslySetInnerHTML={{ __html: result }}></div>
         <br></br>
-        <p className="zombie">남은 좀비: {zombie}</p>
+        <p className="zombie">남은 좀비는 {zombie}마리입니다.</p>
       </div>
 
       <p className="gubun">- - - - - - - - - - - - - - - - - - - - - - -</p>
@@ -322,12 +327,12 @@ function Battle() {
         </div>
 
         <p className="gubun">- - - - - - - - - - - - - - - - - - - - - - -</p>
+        <p>○○, ○○은 회피했다.</p>
+        <p className="gubun">- - - - - - - - - - - - - - - - - - - - - - -</p>
 
         {avoid.map((avoid, index) => (
           <div className="avoid" key={index}>
-            {avoid} /{"  "}
-            민첩
-            {"  "}
+            {avoid} / 민첩
             <select
               className="battle-select"
               onChange={(e) => onChangeAvoidV(e, index)}
@@ -350,11 +355,9 @@ function Battle() {
           <div dangerouslySetInnerHTML={{ __html: resultA }}></div>
         </div>
 
-        {/* <p className="gubun">- - - - - - - - - - - - - - - - - - - - - - -</p>
-
-        <div className="result">
-          <div dangerouslySetInnerHTML={{ __html: resultH }}></div>
-        </div> */}
+        <p>
+          감염장소/부위 기록해두기! <br></br>
+        </p>
       </div>
     </div>
   );
