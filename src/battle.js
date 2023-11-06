@@ -107,12 +107,6 @@ function Battle() {
           kill += 1;
         } else if (action[index].stat === "agi") {
           newResult += `[${newRoll}] ${action[index].name}(은)는 무사히 도주했다.<br>`;
-          setAction((prevAction) =>
-            prevAction.filter((item) => item.name !== action[index].name)
-          );
-          setCharacter((prevCharacter) =>
-            prevCharacter.filter((item) => item !== action[index].name)
-          );
         } else if (action[index].stat === "sec") {
           newResult += `[${newRoll}] 좀비는 ${action[index].name}(을)를 무시했다.<br>`;
         }
@@ -253,7 +247,7 @@ function Battle() {
 
       <p>
         N마리의 좀비와 조우합니다. <br></br>
-        [전투/민첩/은밀]중 하나를 선택해 주세요.
+        [전투/민첩/은밀]중 하나를 판정해 주세요.
       </p>
 
       <input
